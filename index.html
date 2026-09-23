@@ -26,6 +26,7 @@
     --shadow-lift:0 20px 40px -18px rgba(23,16,10,.5);
   }
   html{scroll-behavior:smooth;}
+  *{box-sizing:border-box;}
   body{margin:0;font-family:'Karla',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   h1,h2,h3,h4{font-family:'Fraunces',serif;margin:0;line-height:1.12;}
   p{margin:0;line-height:1.65;}
@@ -105,6 +106,7 @@
     .gallery-grid{grid-template-columns:repeat(2,1fr) !important;grid-auto-rows:170px !important;}
     .gallery-grid > div{grid-column:auto !important;grid-row:auto !important;}
     .stat-num{font-size:36px !important;}
+    .servizi-grid{grid-template-columns:1fr !important;}
   }
 </style>
 </head>
@@ -113,11 +115,11 @@
 <div style="width:100%;min-height:100vh;box-sizing:border-box;display:flex;flex-direction:column;">
 
   <!-- BARRA TELEFONO -->
-  <a href="#contatti" style="display:block;background:var(--ink);text-decoration:none;">
+  <a href="tel:+393518132706" style="display:block;background:var(--ink);text-decoration:none;">
     <div style="max-width:1180px;margin:0 auto;padding:10px 32px;text-align:center;">
       <span style="color:#FFFDF9;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFDF9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        Preferisci parlare con qualcuno? Chiamaci: [+39 000 000 0000]
+        Preferisci parlare con qualcuno? Chiamaci: +39 351 813 2706
       </span>
     </div>
   </a>
@@ -251,7 +253,7 @@
         <p style="margin-top:14px;color:var(--text-soft);font-size:18px;">Un sito pronto per il giorno dell'apertura e una presenza social che ti accompagna nella partenza: tutto quello che serve a una nuova attività per farsi notare da subito.</p>
       </div>
 
-      <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:44px;">
+      <div class="stagger servizi-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:44px;">
 
         <div class="card reveal" style="padding:32px;">
           <span class="icon-badge icon-badge-clay">
@@ -637,7 +639,7 @@
 
       <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:44px;align-items:stretch;">
 
-        <div class="card reveal" style="padding:32px;display:flex;flex-direction:column;">
+        <div class="card reveal" style="padding:32px;display:flex;flex-direction:column;border:2px solid var(--border);">
           <h3 style="font-size:21px;font-weight:600;">Presenza Base</h3>
           <p style="margin-top:8px;color:var(--text-soft);font-size:15px;">Il punto di partenza per farti trovare online.</p>
           <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;flex-grow:1;">
@@ -660,7 +662,7 @@
           <a href="#contatti" class="btn btn-primary" style="margin-top:24px;width:100%;">Richiedi un preventivo</a>
         </div>
 
-        <div class="card reveal" style="padding:32px;display:flex;flex-direction:column;">
+        <div class="card reveal" style="padding:32px;display:flex;flex-direction:column;border:2px solid var(--border);">
           <h3 style="font-size:21px;font-weight:600;">Massima Visibilità</h3>
           <p style="margin-top:8px;color:var(--text-soft);font-size:15px;">Per chi vuole accelerare e conquistare nuovi clienti.</p>
           <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;flex-grow:1;">
@@ -697,8 +699,8 @@
       <div>
         <h3 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-soft);">Contatti</h3>
         <div style="margin-top:16px;display:flex;flex-direction:column;gap:9px;font-size:15px;color:var(--text-soft);">
-          <span>Telefono / WhatsApp: <strong style="color:var(--text);">[+39 000 000 0000]</strong></span>
-          <span>Email: <strong style="color:var(--text);">[la-tua-email@esempio.it]</strong></span>
+          <span>Telefono / WhatsApp: <a href="tel:+393518132706" style="color:var(--text);font-weight:700;">+39 351 813 2706</a></span>
+          <span>Email: <a href="mailto:zzeta099@gmail.com" style="color:var(--text);font-weight:700;">zzeta099@gmail.com</a></span>
           <span>Zona: Galatina (LE) e provincia di Lecce</span>
         </div>
       </div>
