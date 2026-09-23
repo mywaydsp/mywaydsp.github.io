@@ -4,6 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MyWay Digital Studio — Siti Web e Social per chi apre un'attività a Galatina</title>
+<meta name="description" content="Siti web e social media per chi apre o ha appena aperto un ristorante, bar o negozio a Galatina e nel Salento. Sito e social pronti in 5 giorni lavorativi.">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MyWay Digital Studio">
+<meta property="og:title" content="MyWay Digital Studio — Siti Web e Social per chi apre un'attività a Galatina">
+<meta property="og:description" content="Siti web e social media per chi apre o ha appena aperto un ristorante, bar o negozio a Galatina e nel Salento. Sito e social pronti in 5 giorni lavorativi.">
+<meta property="og:image" content="https://zzeta099-create.github.io/vetrina360/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://zzeta099-create.github.io/vetrina360/">
+<meta property="og:locale" content="it_IT">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MyWay Digital Studio — Siti Web e Social per chi apre un'attività a Galatina">
+<meta name="twitter:description" content="Siti web e social media per chi apre o ha appena aperto un ristorante, bar o negozio a Galatina e nel Salento. Sito e social pronti in 5 giorni lavorativi.">
+<meta name="twitter:image" content="https://zzeta099-create.github.io/vetrina360/og-image.jpg">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Karla:wght@400;500;600;700&display=swap">
 <style>
   :root{
@@ -63,12 +82,6 @@
   .icon-badge{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:14px;background:var(--olive-soft);color:var(--olive);flex-shrink:0;}
   .icon-badge-clay{background:#F6E3D6;color:var(--clay);}
 
-  .legend-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px 8px 8px;border-radius:999px;font-size:14px;font-weight:700;}
-  .legend-num{width:22px;height:22px;border-radius:50%;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;}
-
-  .flow-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
-  .flow-stage{flex:1 1 220px;min-width:220px;border-radius:14px;padding:22px 20px;}
-  .flow-arrow{flex:0 0 24px;display:flex;align-items:center;justify-content:center;color:var(--arrow);}
   .flow-num{width:28px;height:28px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;}
 
   /* image treatment */
@@ -90,11 +103,6 @@
 
   .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:16px;margin-top:48px;}
 
-  .sfida-tab{font-family:'Karla',sans-serif;font-size:15px;color:var(--text-soft);background:var(--surface);border:2px solid var(--border);border-radius:14px;padding:13px 20px;cursor:pointer;text-align:left;flex:1 1 220px;transition:border-color .2s ease,background .2s ease,color .2s ease,transform .2s ease;}
-  .sfida-tab:hover{border-color:var(--clay);color:var(--clay);transform:translateY(-2px);}
-  .sfida-tab.is-active{background:var(--clay);border-color:var(--clay);color:#FFFDF9;box-shadow:var(--shadow-lift);}
-  .sfida-tab.is-active:hover{transform:none;}
-
   .faq-item{border-bottom:1px solid var(--border);padding:22px 0;}
   .faq-item summary{cursor:pointer;font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--text);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
   .faq-item summary::-webkit-details-marker{display:none;}
@@ -102,9 +110,9 @@
   .faq-item[open] summary::after{transform:rotate(45deg);}
   .faq-item p{margin-top:12px;color:var(--text-soft);font-size:16px;}
 
-  @media (max-width: 900px){
-    .flow-arrow{display:none;}
-  }
+  .whatsapp-float{display:none;position:fixed;bottom:20px;right:20px;z-index:200;width:58px;height:58px;border-radius:50%;background:#25D366;align-items:center;justify-content:center;box-shadow:0 10px 26px -6px rgba(23,16,10,.55);transition:transform .18s ease;}
+  .whatsapp-float:hover{transform:scale(1.06);}
+
   @media (max-width: 880px){
     .nav-links{display:none;}
     .hero-grid{grid-template-columns:1fr !important;}
@@ -116,6 +124,7 @@
     .servizi-grid{grid-template-columns:1fr !important;}
     .credentials-grid{grid-template-columns:1fr !important;}
     .chi-sono-grid{grid-template-columns:1fr !important;gap:32px !important;}
+    .whatsapp-float{display:flex !important;}
   }
 </style>
 </head>
@@ -450,160 +459,22 @@
         <p style="margin-top:14px;color:var(--text-soft);font-size:17px;">Non parto da un modello generico: per ogni sfida reale del territorio mostro cosa succede se non si agisce, e cosa cambia quando lo si fa.</p>
       </div>
 
-      <!-- Legenda -->
-      <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:32px;">
-        <span class="legend-pill" style="background:#F6E3D6;color:var(--clay);"><span class="legend-num" style="background:var(--clay);">1</span>Il problema</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--arrow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
-        <span class="legend-pill" style="background:#F1D3BE;color:var(--clay-dark);"><span class="legend-num" style="background:var(--clay-dark);">2</span>L'effetto negativo</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--arrow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
-        <span class="legend-pill" style="background:var(--olive-soft);color:var(--olive);"><span class="legend-num" style="background:var(--olive);">3</span>La soluzione</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--arrow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
-        <span class="legend-pill" style="background:var(--growth-soft);color:var(--growth);"><span class="legend-num" style="background:var(--growth);">4</span>La crescita</span>
-      </div>
-
-      <!-- TAB SFIDE -->
-      <div class="reveal" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:40px;" id="sfida-tabs">
-        <button type="button" class="sfida-tab is-active" data-target="sfida-1">
-          <span style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;opacity:.75;">Sfida 1</span>
-          <span style="display:block;margin-top:3px;">Il turismo è stagionale</span>
-        </button>
-        <button type="button" class="sfida-tab" data-target="sfida-2">
-          <span style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;opacity:.75;">Sfida 2</span>
-          <span style="display:block;margin-top:3px;">Poche risorse digitali</span>
-        </button>
-        <button type="button" class="sfida-tab" data-target="sfida-3">
-          <span style="display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;opacity:.75;">Sfida 3</span>
-          <span style="display:block;margin-top:3px;">Decisione rapida del cliente</span>
-        </button>
-      </div>
-
-      <!-- PANNELLO SFIDA 1 — STAGIONALITÀ -->
-      <div id="sfida-1" class="sfida-panel" data-panel style="margin-top:36px;">
-        <h3 class="reveal" style="font-size:19px;font-weight:600;">Il turismo qui è fortemente stagionale</h3>
-        <div class="flow-row stagger">
-          <div class="flow-stage reveal" style="background:#F6E3D6;">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--clay);">1</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--clay);">Il problema</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Il turismo si concentra in pochi mesi</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Il Salento cresce come meta turistica, ma la maggior parte dei clienti arriva solo in estate.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:#F1D3BE;">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--clay-dark);">2</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--clay-dark);">L'effetto</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Casse piene ad agosto, sala vuota a novembre</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Fuori stagione il passaparola non basta: senza una presenza online attiva, il locale sparisce dai radar.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:var(--olive-soft);">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--olive);">3</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--olive);">La soluzione</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Comunicazione attiva 12 mesi su 12</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Pianifico contenuti e promozioni anche nei mesi deboli, non solo a Ferragosto.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:var(--growth-soft);">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--growth);">4</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--growth);">La crescita</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Entrate più stabili tutto l'anno</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Meno dipendenza dai due mesi d'oro, più clienti anche in bassa stagione.</p>
-          </div>
+      <div class="stagger" style="margin-top:36px;display:flex;flex-direction:column;gap:0;">
+        <div class="reveal" style="display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--border);">
+          <span class="flow-num" style="background:var(--clay);flex-shrink:0;margin-top:2px;">1</span>
+          <p style="color:var(--text-soft);font-size:16px;"><strong style="color:var(--text);">Il turismo è stagionale:</strong> comunico tutto l'anno, non solo in alta stagione, per entrate più stabili.</p>
+        </div>
+        <div class="reveal" style="display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--border);">
+          <span class="flow-num" style="background:var(--olive);flex-shrink:0;margin-top:2px;">2</span>
+          <p style="color:var(--text-soft);font-size:16px;"><strong style="color:var(--text);">Poche risorse digitali in negozio:</strong> me ne occupo io, sito e social sempre aggiornati senza portarti via tempo.</p>
+        </div>
+        <div class="reveal" style="display:flex;gap:14px;align-items:flex-start;padding:18px 0;">
+          <span class="flow-num" style="background:var(--growth);flex-shrink:0;margin-top:2px;">3</span>
+          <p style="color:var(--text-soft);font-size:16px;"><strong style="color:var(--text);">Il cliente decide in pochi minuti:</strong> scheda Google curata ogni settimana, per farti trovare pronto e scegliere te.</p>
         </div>
       </div>
 
-      <!-- PANNELLO SFIDA 2 — RISORSE DIGITALI -->
-      <div id="sfida-2" class="sfida-panel" data-panel style="margin-top:36px;display:none;">
-        <h3 class="reveal" style="font-size:19px;font-weight:600;">Le piccole attività hanno poche risorse digitali</h3>
-        <div class="flow-row stagger">
-          <div class="flow-stage reveal" style="background:#F6E3D6;">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--clay);">1</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--clay);">Il problema</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">In negozio nessuno ha tempo per il digitale</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Gestire sito e social richiede tempo e competenze che in una piccola attività spesso mancano.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:#F1D3BE;">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--clay-dark);">2</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--clay-dark);">L'effetto</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Pagina ferma da mesi, sito vecchio o assente</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Agli occhi di chi cerca, sembra che l'attività abbia chiuso — anche se non è affatto vero.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:var(--olive-soft);">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--olive);">3</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--olive);">La soluzione</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Un solo referente gestisce tutto</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Me ne occupo io: sito, social e scheda Google sempre aggiornati, senza un minuto del tuo tempo.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:var(--growth-soft);">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--growth);">4</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--growth);">La crescita</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Presenza online sempre curata</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Tu resti concentrato sulla tua attività, la tua immagine online lavora comunque per te.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- PANNELLO SFIDA 3 — RICERCA E DECISIONE RAPIDA -->
-      <div id="sfida-3" class="sfida-panel" data-panel style="margin-top:36px;display:none;">
-        <h3 class="reveal" style="font-size:19px;font-weight:600;">Il cliente cerca e decide nel giro di poche ore</h3>
-        <div class="flow-row stagger">
-          <div class="flow-stage reveal" style="background:#F6E3D6;">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--clay);">1</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--clay);">Il problema</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Il cliente cerca e decide in pochi minuti</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Chi digita "ristorante vicino a me" sceglie quasi subito, guardando ciò che trova su Google.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:#F1D3BE;">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--clay-dark);">2</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--clay-dark);">L'effetto</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Scheda incompleta, recensioni vecchie: escluso</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Con una scheda Google debole, il cliente sceglie il primo risultato curato — spesso un concorrente.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:var(--olive-soft);">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--olive);">3</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--olive);">La soluzione</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Scheda Google curata ogni settimana</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Foto aggiornate, orari corretti, recensioni seguite: ti presento sempre al meglio.</p>
-          </div>
-          <div class="flow-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></div>
-          <div class="flow-stage reveal" style="background:var(--growth-soft);">
-            <div style="display:flex;align-items:center;gap:8px;">
-              <span class="flow-num" style="background:var(--growth);">4</span>
-              <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--growth);">La crescita</span>
-            </div>
-            <h4 style="font-size:16px;font-weight:700;margin-top:12px;">Più chiamate, più clienti nuovi</h4>
-            <p style="margin-top:8px;font-size:15px;color:var(--text-soft);">Chi cerca ti trova pronto, e sceglie te invece del concorrente.</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="reveal" style="margin-top:40px;color:var(--text-soft);font-size:13px;">Dati: ISTAT (Imprese e ICT, 2024-2025), Regione Puglia (flussi turistici 2024), BrightLocal (comportamento di ricerca locale, 2025).</p>
+      <p class="reveal" style="margin-top:24px;color:var(--text-soft);font-size:13px;">Dati: ISTAT (Imprese e ICT, 2024-2025), Regione Puglia (flussi turistici 2024), BrightLocal (comportamento di ricerca locale, 2025).</p>
     </div>
   </section>
 
@@ -796,6 +667,11 @@
 
 </div>
 
+<!-- WHATSAPP FLOTTANTE (mobile) -->
+<a href="https://wa.me/393518132706" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Scrivimi su WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFDF9"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.81 14.09c-.25.7-1.24 1.28-2.03 1.45-.54.11-1.24.2-3.62-.78-2.99-1.24-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.75-2.18 1.02-2.48c.25-.28.55-.34.73-.34h.53c.17 0 .4-.06.62.48.25.6.85 2.07.92 2.22.07.15.12.33.02.53-.09.2-.14.33-.28.5-.14.17-.29.38-.42.51-.14.14-.28.29-.13.57.15.28.68 1.13 1.47 1.84 1.01.91 1.87 1.19 2.15 1.33.28.14.44.12.6-.07.17-.2.73-.85.92-1.15.19-.29.38-.24.63-.14.25.09 1.62.77 1.9.91.28.14.46.21.53.33.07.13.07.72-.18 1.42z"></path></svg>
+</a>
+
 <script>
 (function(){
   var els = document.querySelectorAll('.reveal');
@@ -815,21 +691,6 @@
   setTimeout(function(){
     els.forEach(function(el){ el.classList.add('is-visible'); });
   }, 2500);
-})();
-
-(function(){
-  var tabs = document.querySelectorAll('.sfida-tab');
-  var panels = document.querySelectorAll('.sfida-panel');
-  tabs.forEach(function(tab){
-    tab.addEventListener('click', function(){
-      tabs.forEach(function(t){ t.classList.remove('is-active'); });
-      panels.forEach(function(p){ p.style.display = 'none'; });
-      tab.classList.add('is-active');
-      var panel = document.getElementById(tab.dataset.target);
-      panel.style.display = '';
-      panel.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
-    });
-  });
 })();
 </script>
 
